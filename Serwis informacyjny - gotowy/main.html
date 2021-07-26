@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PCMasterRace.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/plik.css"/>
+  <link rel="stylesheet" type="text/css" href="/Content/font-awesome/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="./js/script1.js"></script>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        $('#carousel1').carousel({
+            interval: 4000
+        });
+
+        var clickEvent = false;
+
+        $('#carousel1').on('click', '.nav a', function () {
+            clickEvent = true;
+            $('.nav li').removeClass('active');
+            $(this).parent().addClass('active');
+        }).on('slid.bs.carousel', function (e) {
+            if (!clickEvent) {
+                var count = $('.nav').children().length - 1;
+                var current = $('.nav li.active');
+                current.removeClass('active').next().addClass('active');
+                var id = parseInt(current.data('slide-to'));
+                if (count == id) {
+                    $('.nav li').first().addClass('active');
+                }
+            }
+            clickEvent = false;
+        });
+    });
+</script>
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="main.html">#PCMasterRace!</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="main.html"> Strona główna</a></li>
+        <li class="dropdown">
+        <li><a href="mainlast.html">Artykuły</a></li>
+        <li><a href="mainnews-Zestawy_komputerowe_news.html">Zestawy</a></li>
+        <li><a href="http://forum.purepc.pl/">Forum</a></li>
+        <li><a href="mainkontakt.html">Kontakt</a></li>
+      </ul>
+	  <li class="divider-vertical">
+		<form class="navbar-form navbar-left" method="get" action="http://www.google.com/search">
+		<div class="form-group">
+		<input type="text" class="form-control" placeholder="Szukaj w portalu">
+		<button type="submit" class="btn btn-colorbutton">Szukaj</button>
+		</div>
+		</form>	
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Zarejestruj się</a></li>
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span>Logowanie<span class="caret"></span></a>
+			<ul id="login-dp" class="dropdown-menu">
+				<li>
+					 <div class="row">
+							<div class="col-md-12">
+								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputEmail2">Adres e-mail</label>
+											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+										</div>
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputPassword2">Hasło</label>
+											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                             <div class="help-block text-right"><a href="">Zapomniałeś hasła??</a></div>
+										</div>
+										<div class="form-group">
+											 <button type="submit" class="btn btn-primary btn-block">Zaloguj</button>
+										</div>
+								 </form>
+							</div>
+					 </div>
+				</li>
+			</ul>
+        </li>
+		<ul>
+		</ul>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+	<div id="carousel1" class="carousel slide" data-ride="carousel" >
+        <div class="carousel-inner">
+            <div class="item active">
+                <a href="mainlast-Grand Theft Auto V - Jaki komputer do Full HD i 4K przy 60 FPS.html"><img alt="Bootstrap template" src=".\obrazki\glowna\1.jpg" class="img-responsive">
+                <div class="carousel-caption" id="cover">
+                    <h3>Grand Theft Auto V - Jaki komputer do Full HD i 4K przy 60 FPS?</h3>
+                    <p>
+
+                    </p>
+                </div>
+				</a>
+            </div>
+            <div class="item">
+                 <a href="mainnews-Batman Arkham Knight.html"><img alt="Bootstrap template" src=".\obrazki\glowna\2.jpg" class="img-responsive">
+                <div class="carousel-caption" id="cover">
+                    <h3>Wymagania sprzętowe Batman: Arkham Knight będą wysokie?</h3>
+                    <p>
+
+                    </p>
+                </div>
+				</a>
+            </div>
+            <div class="item">
+                <a href="mainlast-NVIDIA GeForce GTX Titan X Ultra z chłodzeniem wodnym.html"><img alt="Bootstrap template" src=".\obrazki\glowna\3.jpg" class="img-responsive">
+                <div class="carousel-caption" id="cover">
+                    <h3>NVIDIA GeForce GTX Titan X Ultra z chłodzeniem wodnym?</h3>
+                    <p>
+
+                    </p>
+                </div>
+				</a>
+            </div>
+			<div class="item">
+                <a href="mainnews-XFX Radeon R9 390 Double Dissipation na zdjęciach.html"><img alt="Bootstrap template" src=".\obrazki\glowna\4.jpg" class="img-responsive">
+                <div class="carousel-caption" id="cover">
+                    <h3>XFX Radeon R9 390 Double Dissipation na zdjęciach?</h3>
+                    <p>
+
+                    </p>
+                </div>
+				</a>
+            </div>
+			<div class="item">
+                <a href="mainlast-Wiedźmin 3 Dziki Gon - Dwa duże dodatki DLC za 18 euro.html"><img alt="Bootstrap template" src=".\obrazki\glowna\5.jpg" class="img-responsive">
+                <div class="carousel-caption" id="cover">
+                    <h3>Wiedźmin 3: Dziki Gon - Dwa duże dodatki DLC za 18 euro</h3>
+                    <p>
+
+                    </p>
+                </div>
+				</a>
+            </div>
+			<div class="item">
+                <a href="mainnews-Windows 10.1 Redstone - Premiera systemu w przyszłym roku.html"><img alt="Bootstrap template" src=".\obrazki\glowna\6.jpg" class="img-responsive">
+                <div class="carousel-caption" id="cover">
+                    <h3>WWindows 10.1 Redstone - Premiera systemu w przyszłym roku</h3>
+                    <p>
+
+                    </p>
+                </div>
+				</a>
+            </div>
+        </div>
+        <ul class="nav nav-pills nav-justified">
+            <li data-target="#carousel1" data-slide-to="0" class="active">
+                <a href="#">News - 1<small>Grand Theft Auto V</small></a>
+            </li>
+            <li data-target="#carousel1" data-slide-to="1">
+                <a href="#">News - 2<small>Batman Arkham Knight</small></a>
+            </li>
+            <li data-target="#carousel1" data-slide-to="2">
+                <a href="#">News - 3<small>GeForce GTX Titan X Ultra</small></a>
+            </li>
+			<li data-target="#carousel1" data-slide-to="3">
+                <a href="#">News - 4<small>XFX Radeon R9 390</small></a>
+            </li>
+            <li data-target="#carousel1" data-slide-to="4">
+                <a href="#">News - 5<small>Wiedźmin 3: Dziki Gon</small></a>
+            </li>
+			<li data-target="#carousel1" data-slide-to="5">
+                <a href="#">News - 6<small>WWindows 10.1 Redstone</small></a>
+            </li>
+        </ul>
+    </div>		
+	<div class="minibanner"><center><b>Najnowsze informacje</center></b>
+		<div class="table-responsive">
+			<div class="img2">
+				<thead>
+					<tr>
+					<th><a class="hovertext" href="mainlast-Grand Theft Auto V - Jaki komputer do Full HD i 4K przy 60 FPS.html" title="GTA V - Wymagania"><img src=".\obrazki\glowna\gta720p.jpg"></th>
+					<th><a class="hovertext" href="mainlast-Apple iMac - Premiera komputera z wyświetlaczem 8K w tym roku.html" title="Apple - 8K w tym roku"><img src=".\obrazki\glowna\apple1.jpg"></th>
+					<th><a class="hovertext" href="mainlast-Autor uBlocka porzuca prace nad dodatkiem.html" title="Adblock - koniec prac"><img src=".\obrazki\glowna\adblock720p.jpg"></th>
+					<th><a class="hovertext" href="mainnews-Windows 10.1 Redstone - Premiera systemu w przyszłym roku.html" title="Win10 - premiera za rok"><img src=".\obrazki\glowna\win10720p.jpg"></th>
+					<th><a class="hovertext" href="mainlast-Rynek systemów operacyjnych - Windows 7 ciągle rośnie.html" title="Win7 - dominuje"><img src=".\obrazki\glowna\Windows-7.jpg"></th>
+					<th><a class="hovertext" href="mainnews-Radeon_R9_290X_i_R9_290_-_To_już_koniec_obniżek_cen.html" title="Obniżka cen Radeonów"><img src=".\obrazki\glowna\r9290-720p.jpg"></th>
+					</tr>
+				</thead>
+			</div>
+		</div>
+	</div>
+
+    <div id="cnt1" class="feature">
+        <div class="col-md-4">
+			<div class="span6">
+                <h4><b><a href="mainlast-Grand Theft Auto V - Jaki komputer do Full HD i 4K przy 60 FPS.html">Grand Theft Auto V - Jaki komputer do Full HD i 4K przy 60FPS?</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 09-04-2015
+				<legend></legend>
+                <p>
+				<a href="mainnews-gtav_fps60"><img src=".\obrazki\glowna\gta_v_logo_1.jpg" class="img-responsive" alt="w3dg" style="float:left"  class="img-rounded" ></a>
+				Grand Theft Auto V to jedna z tych gier komputerowych, o której napisane zostało setki wiadomości
+				w mediach branżowych. Mówiąc szczerze, kolejne zastanawianie się nad elementami produkcji z 2013 
+				roku nie wygląda zbyt dobrze - Rockstar Games cieszy się z takiego rozwoju sytuacji, bowiem 
+				kilkukrotne przełożenie premiery...                     
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="span6">
+                <h4><b><a href="mainnews-YouTube-Miesięczny_abonament_za_brak_reklam.html">YouTube - Miesięczny abonament za brak reklam</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 09-04-2015
+				<legend></legend>
+                <p>
+				<a href="mainnews-YouTube-Miesięczny_abonament_za_brak_reklam.html"><img src=".\obrazki\glowna\youtube.png" class="img-responsive" alt="win10" style="float:left" class="img-rounded"></a>
+				Użytkownicy Internetu na każdym kroku spotykają się z reklamami, których oczywiście nikt nie lubi.
+				Czasami trafiają się niezłe oferty lub ciekawe sugestie zakupowe, ale w wielu przypadkach mówimy
+				o bezwartościowej treści zajmującej przestrzeń na stronie internetowej - co innego, że bez
+				reklam trudno byłoby prowadzić...    
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="span6">
+                <h4><b><a href="mainnews-Radeon_R9_290X_i_R9_290_-_To_już_koniec_obniżek_cen.html">Radeon R9 290X i R9 290 - To już koniec obniżek cen</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 09-04-2015
+				<legend></legend>
+                <p>
+				<a href="mainnews-Radeon_R9_290X_i_R9_290_-_To_już_koniec_obniżek_cen.html"><img src=".\obrazki\glowna\radeon.jpg" class="img-responsive" alt="w3dg" style="float:left" class="img-rounded"></a>
+				Cały czas czekamy na oficjalną premierę nowych kart graficznych Radeon R9 300, które mają wnieść
+				nową jakość na rynek GPU - zapowiedzi są naprawdę ekscytujące, a nawet zachwycające... Po wielu 
+				miesiącach przecieków wiemy już wiele na temat dwóch czołowych modeli, ale wciąż nie potrafimy
+				ocenić wydajności zapewnianej...    
+                </p>
+            </div>
+        </div>
+	<legend></legend>
+		<div class="col-md-4" id="cnt1">
+			<div class="span6">
+                <h4><b><a href="mainnews-XFX Radeon R9 390 Double Dissipation na zdjęciach.html">XFX Radeon R9 390 Double Dissipation na zdjęciach</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 09-04-2015
+				<legend></legend>
+                <p>
+				<a href="mainnews-XFX Radeon R9 390 Double Dissipation na zdjęciach.html"><img src=".\obrazki\glowna\xfx_radeon_r9_390.jpg" class="img-responsive" alt="w3dg" style="float:left"  class="img-rounded"></a>
+				Od kilku miesięcy docierają do nas doniesienia na temat nadchodzących kart graficznych Radeon,
+				ale nie zawsze mieliśmy możliwość obejrzenia tychże akceleratorów na zdjęciach - podzespoły
+				komputerowe mają to do siebie, że ich wygląd to sprawa drugiego rzędu, bowiem najważniejsze 
+				są oferowane możliwości oraz...                   
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4" id="cnt1">
+            <div class="span6">
+                <h4><b><a href="mainnews-Windows 10.1 Redstone - Premiera systemu w przyszłym roku.html">Windows 10.1 Redstone - Premiera systemu w przyszłym roku</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 08-04-2015 
+				<legend></legend>
+                <p>
+				<a href="mainnews-Windows 10.1 Redstone - Premiera systemu w przyszłym roku.html"><img src=".\obrazki\glowna\win_10_min.jpg" class="img-responsive" alt="win10" style="float:left" class="img-rounded"></a>
+				Firma Microsoft zmieniła podejście do swoich systemów operacyjnych z rodziny Windows - głęboką
+				przemianę obserwujemy już od kilku lat. Jeszcze przed ósemką mieliśmy do czynienia z 
+				oprogramowaniem, które było wydawane w dużych wydaniach co kilka lat. Oczywiście, po drodze
+				można było instalować różne aktualizacje,...    
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4" id="cnt1">
+            <div class="span6">
+                <h4><b><a href="mainlast-Apple iMac - Premiera komputera z wyświetlaczem 8K w tym roku.html">Apple iMac - Premiera komputera z wyświetlaczem 8K w tym roku</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 07-04-2015 12:22
+				<legend></legend>
+                <p>
+				<a href="mainlast-Apple iMac - Premiera komputera z wyświetlaczem 8K w tym roku.html"><img src=".\obrazki\glowna\apple_imac_5k_min.jpg" class="img-responsive" alt="w3dg" style="float:left" class="img-rounded"></a>
+				Niektórzy nie potrafią trzymać języka za zębami... Na rynku urządzeń elektronicznych co jakiś 
+				czas dochodzi do "przypadkowego" ujawnienia nowego produktu przez firmę, która dostarcza dla 
+				niego podzespoły - Apple ma spore doświadczenie z dostawcami lubiącymi na przykład udostępnić 
+				zdjęcie nowego iPhone'a na wiele...
+                </p>
+            </div>
+        </div>
+		<legend></legend>
+	</div>
+	<div class="table-responsive">
+		<div class="minibanner"><center><b>Ostatnie informacje</center></b>
+			<div class="img2">
+				<thead>
+					<tr>
+					<th><a class="hovertext" href="mainlast-Grand Theft Auto V - Jaki komputer do Full HD i 4K przy 60 FPS.html" title="GTA V - Wymagania"><img src=".\obrazki\glowna\gta720p.jpg"></th>
+					<th><a class="hovertext" href="mainlast-Apple iMac - Premiera komputera z wyświetlaczem 8K w tym roku.html" title="Apple - 8K w tym roku"><img src=".\obrazki\glowna\apple1.jpg"></th>
+					<th><a class="hovertext" href="mainlast-Autor uBlocka porzuca prace nad dodatkiem.html" title="Adblock - koniec prac"><img src=".\obrazki\glowna\adblock720p.jpg"></th>
+					<th><a class="hovertext" href="mainnews-Windows 10.1 Redstone - Premiera systemu w przyszłym roku.html" title="Win10 - premiera za rok"><img src=".\obrazki\glowna\win10720p.jpg"></th>
+					<th><a class="hovertext" href="mainlast-Rynek systemów operacyjnych - Windows 7 ciągle rośnie.html" title="Win7 - dominuje"><img src=".\obrazki\glowna\Windows-7.jpg"></th>
+					<th><a class="hovertext" href="mainnews-Radeon_R9_290X_i_R9_290_-_To_już_koniec_obniżek_cen.html" title="Obniżka cen Radeonów"><img src=".\obrazki\glowna\r9290-720p.jpg"></th>
+					</tr>
+				</thead>
+			</div>
+		</div>
+	</div>
+	 <div id="cnt1" class="feature">
+        <div class="col-md-4" id="cnt1">
+            <div class="span6">
+                <h4><b><a href="mainlast-Wiedźmin 3 Dziki Gon - Dwa duże dodatki DLC za 18 euro.html">Wiedźmin 3: Dziki Gon - Dwa duże dodatki DLC za 18 euro</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 06-04-2015
+				<legend></legend>
+                <p>
+				<a href="mainlast-Wiedźmin 3 Dziki Gon - Dwa duże dodatki DLC za 18 euro.html"><img src=".\obrazki\glowna\wiedzmin3_min.jpg" class="img-responsive" alt="w3dg" style="float:left" class="img-rounded" ></a>
+				O Wiedźminie 3: Dziki Gon mówi się już często i dużo - został dosłownie miesiąc do oficjalnej
+				premiery, więc wzrok wszystkich fanów serii jest zwrócony na informacje pojawiające się w
+				sieci... a ich wcale nie brakuje. Wczoraj mogliśmy oglądać pierwsze 15 minut rozgrywki 
+				udostępnione przez serwis IGN, jednak...  
+                </p>              
+            </div>
+        </div>
+		<div class="col-md-4" id="cnt1">
+            <div class="span6">
+                <h4><b><a href="mainlast-Samsung Electronics prognozuje spadek zysku w Q1 o 30.html">Samsung Electronics prognozuje spadek zysku w Q1 o 30%</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 05-04-2015
+				<legend></legend>
+                <p>
+				<a href="mainlast-Samsung Electronics prognozuje spadek zysku w Q1 o 30.html"><img src=".\obrazki\glowna\samsung_galaxy.jpg" class="img-responsive" alt="w3dg" style="float:left" class="img-rounded" width="150" height="150"></a>
+				W biznesie, tak jak w życiu, nie zawsze wszystko idzie po naszej myśli - przewidywania analityków
+				dotyczące prognozowanych wyników finansowych czasami się nie sprawdzają, przez co inwestorzy są 
+				rozczarowani, a nawet rozgoryczeni. W przypadku najnowszych informacji na temat kondycji Samsung
+				Electronics...      
+                </p>
+                
+            </div>
+        </div>
+        <div class="col-md-4" id="cnt1">
+			<div class="span6">
+                <h4><b><a href="mainlast-Grand Theft Auto V - Obejrzyj nowy trailer wersji dla PC w 60 FPS.html">Grand Theft Auto V - Obejrzyj nowy trailer wersji dla PC w 60 FPS</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 04-04-2015
+				<legend></legend>
+                <p>
+				<a href="mainlast-Grand Theft Auto V - Obejrzyj nowy trailer wersji dla PC w 60 FPS.html"><img src=".\obrazki\glowna\gta_v_logo_1.jpg" class="img-responsive" alt="w3dg" style="float:left"  class="img-rounded" width="150" height="150"></a>
+					Zgodnie z wcześniejszymi zapowiedziami, studio Rockstar Games
+					opublikowało najnowszy trailer gry Grand Theft Auto V dla PC.
+					Produkcja z 2013 roku w dalszym ciągu wywołuje spore emocje i przyciąga
+					do siebie miliony graczy z całego świata - niestety, pecetowcom nie było 
+					na razie ...
+                </p>
+                
+            </div>
+        </div>
+	<legend></legend>	
+        <div class="col-md-4" id="cnt1">
+            <div class="span6">          
+                <h4><b><a href="mainlast-Rynek systemów operacyjnych - Windows 7 ciągle rośnie.html">Rynek systemów operacyjnych - Windows 7 ciągle rośnie</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 04-04-2015
+				<legend></legend>
+                <p>
+				<a href="mainlast-Rynek systemów operacyjnych - Windows 7 ciągle rośnie.html"><img src=".\obrazki\glowna\systemy.jpg" class="img-responsive" alt="win10" style="float:left" class="img-rounded" width="150" height="150"></a>
+					Każdy producent oprogramowania liczy na to, że klienci czym prędzej
+					przesiądą się na najnowszą wersję danej aplikacji lub systemu operacyjnego.
+					Czasami użytkownicy okazują się jednak bardzo oporni we wprowadzaniu zmian
+					w swoich komputerach i korzystają ze starszych produktów przez długie lata...       
+                </p>
+                
+            </div>
+        </div>
+        <div class="col-md-4" id="cnt1">
+            <div class="span6">
+                <h4><b><a href="mainlast-Autor uBlocka porzuca prace nad dodatkiem.html">Autor uBlocka porzuca prace nad dodatkiem</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 03-04-2015
+				<legend></legend>
+                <p>
+				<a href="mainlast-Autor uBlocka porzuca prace nad dodatkiem.html"><img src=".\obrazki\glowna\ublock_min.png" class="img-responsive" alt="w3dg" style="float:left" class="img-rounded" width="150" height="150"></a>
+					Reklamy występujące na niektórych stronach internetowych są prawdziwą zmorą,
+					dlatego też użytkownicy sieci są zmuszeni do instalowania oprogramowania,
+					które potrafi blokować nachalne treści. Często tego typu aplikacje działają na zasadzie
+					rozszerzenia do przeglądarki internetowej, jednak każdy kij ma dwa końce –...       
+                </p>
+                
+            </div>
+        </div>
+		<div class="col-md-4" id="cnt1">
+            <div class="span6">
+                <h4><b><a href="mainlast-NVIDIA GeForce GTX Titan X Ultra z chłodzeniem wodnym.html">NVIDIA GeForce GTX Titan X Ultra z chłodzeniem wodnym?</h4></b></a>
+				<legend></legend>Autor: Kamil Zając | 03-04-2015
+				<legend></legend>
+                <p>
+				<a href="mainlast-NVIDIA GeForce GTX Titan X Ultra z chłodzeniem wodnym.html"><img src=".\obrazki\glowna\geforce.jpg" class="img-responsive" alt="w3dg" style="float:left" class="img-rounded" width="150" height="150"></a>
+				Czyżby NVIDIA zazdrościła swojemu głównemu konkurentowi,
+				który już od jakiegoś czasu oferuje chłodzenie wodne w referencyjnym
+				modelu z serii Radeon R9 295X2? W sieci zaczynają pojawiać się informacje na temat
+				nowej wersji karty graficznej GeForce GTX Titan X wyposażonej w usprawniony system...      
+                </p>               
+            </div>			
+        </div>
+		<legend></legend>
+    </div>
+</div>
+
+
+
+	<div class="footer">
+		<center><table>
+			<td style="width:20%; text-align:left; font-size: 16px; a:link color: #d9edf7;">
+				<a href="http://www.nomadpc.wordpress.com" target="_blank"><img src=".\obrazki\icons\wordpress.png"></a>
+				<a href="./pliki/cv-kamil-zajac.pdf" target="_blank"><img src=".\obrazki\icons\pracuj2.png"></a>
+			</td>
+			<td style="width:30%; text-align:center; font-size: 16px;">
+				<i> Wszelkie prawa zastrzeżone przez Kamil Zając </i>
+			</td>
+			<td style="width:20%; text-align:right";>
+				<a href="https://pl.linkedin.com/in/kamil-zając-96b895128" target="_blank"><img src=".\obrazki\icons\linkedin.png"></a>
+				<a href="https://www.facebook.com/kamil.zajac.5458" target="_blank"><img src=".\obrazki\icons\facebook.png"></a>
+			</td>
+		</center>
+	</div>
+
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+</body>
+</html>
